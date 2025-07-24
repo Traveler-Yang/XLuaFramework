@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
@@ -42,7 +41,7 @@ public class BuildTool : Editor
 
             string assetName = PathUtil.GetUnityPath(fileName);
             assetBundle.assetNames = new string[] { assetName };
-            string bundleName = files[i].Replace(PathUtil.BuildResourcesPath, "").ToLower();
+            string bundleName = fileName.Replace(PathUtil.BuildResourcesPath, "").ToLower().TrimStart('/');
             assetBundle.assetBundleName = bundleName + ".ab";
             assetBundleBuilds.Add(assetBundle);
         }

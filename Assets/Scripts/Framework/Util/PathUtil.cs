@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PathUtil
@@ -12,7 +10,7 @@ public class PathUtil
     /// <summary>
     /// 需要打bundle的路径
     /// </summary>
-    public static readonly string BuildResourcesPath = AssetsPath + "BuildResources";
+    public static readonly string BuildResourcesPath = AssetsPath + "/BuildResources";
 
     /// <summary>
     /// bundle打包输出路径
