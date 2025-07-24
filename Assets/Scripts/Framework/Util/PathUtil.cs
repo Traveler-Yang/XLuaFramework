@@ -3,7 +3,7 @@ using UnityEngine;
 public class PathUtil
 {
     /// <summary>
-    /// 根路径
+    /// 根路径（Assets的路径）
     /// </summary>
     public static readonly string AssetsPath = Application.dataPath;
 
@@ -16,6 +16,14 @@ public class PathUtil
     /// bundle打包输出路径
     /// </summary>
     public static readonly string BundledOutPath = Application.streamingAssetsPath;
+
+    /// <summary>
+    /// bundle资源文件路径
+    /// </summary>
+    public static string BundleResourcePath
+    {
+        get { return Application.streamingAssetsPath; }
+    }
 
     /// <summary>
     /// 获取Unity相对路径

@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 26540752
+CRC: 663520964
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: f0ec2f970176d69ef509f3a4b56e5395
+    Hash: bd2776ea2715b512fdb7c4c068795264
   TypeTreeHash:
     serializedVersion: 2
     Hash: 2d8df09e698f722ada1caa03d3413830
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: f0ec2f970176d69ef509f3a4b56e5395
+    Hash: bd2776ea2715b512fdb7c4c068795264
 HashAppended: 0
 ClassTypes:
 - Class: 28
@@ -18,5 +18,5 @@ ClassTypes:
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
-- Assets/BuildResources/UI/Res/Tex_0045_0_0.png
+- Assets/BuildResources/UI/Res/Tex_0243_87.png
 Dependencies: []
