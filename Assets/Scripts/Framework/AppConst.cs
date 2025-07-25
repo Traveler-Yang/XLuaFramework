@@ -20,5 +20,5 @@ public class AppConst
     /// <summary>
     /// 热更资源地址
     /// </summary>
-    public const string ResoucesUrl = "http://127.0.0.1/AssetBundles";
+    public const string ResoucesUrl = "http://192.168.1.63/AssetBundles";
 }

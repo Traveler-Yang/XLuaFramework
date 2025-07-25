@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Xml.Linq;
 using UnityEngine;
 using UnityEngine.Networking;
 
@@ -69,7 +70,7 @@ public class HotUpdate : MonoBehaviour
             string[] info = files[i].Split('|');
             DownFileInfo fileInfo = new DownFileInfo();
             fileInfo.fileName = info[1];
-            fileInfo.url = Path.Combine(path, info[i]);
+            fileInfo.url = Path.Combine(path, info[1]);
             downFileInfos.Add(fileInfo);
         }
         return downFileInfos;
@@ -131,6 +132,7 @@ public class HotUpdate : MonoBehaviour
     /// <param name="fileInfo"></param>
     private void OnReleaseFileComplete(DownFileInfo fileInfo)
     {
+        Debug.LogFormat("OnReleaseFileComplete: {0}", fileInfo.url);
         string writeFile = Path.Combine(PathUtil.ReadWritePath, fileInfo.fileName);
         FileUtil.WriteFile(writeFile, fileInfo.fileData.data);
     }
@@ -183,6 +185,7 @@ public class HotUpdate : MonoBehaviour
 
     private void OnUpdateFileComplete(DownFileInfo fileInfo)
     {
+        Debug.LogFormat("OnUpdateFileComplete: {0}", fileInfo.url);
         string writeFile = Path.Combine(PathUtil.ReadWritePath, fileInfo.fileName);
         FileUtil.WriteFile(writeFile, fileInfo.fileData.data);
     }
@@ -195,6 +198,15 @@ public class HotUpdate : MonoBehaviour
 
     private void EnterGame()
     {
-        
+        Manager.Resource.ParseVersionFile();
+        Manager.Resource.LoadUI("Login/LoginUI", OnComplete);
+    }
+
+    private void OnComplete(UnityEngine.Object obj)
+    {
+        GameObject go = Instantiate(obj) as GameObject;
+        go.transform.SetParent(this.transform);//设置父节点
+        go.SetActive(true);//启用
+        go.transform.localPosition = Vector3.zero;//位置归零
     }
 }

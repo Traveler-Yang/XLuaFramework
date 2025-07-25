@@ -35,8 +35,8 @@ public class PathUtil
         get 
         {
             if (AppConst.gameMode == GameMode.UpdateMode)
-                return Application.persistentDataPath;//如果是更新模式，则读取路径为持续化路径
-            return Application.streamingAssetsPath;//否则为流动路径
+                return ReadWritePath;//如果是更新模式，则读取路径为持续化路径
+            return ReadPath;//否则为流动路径
         }
     }
 
