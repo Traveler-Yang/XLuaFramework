@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using UnityEditor;
 using UnityEngine;
 using UObject = UnityEngine.Object;
 
@@ -72,18 +73,88 @@ public class ResourceManager : MonoBehaviour
 
         AssetBundleRequest bundleRequest = request.assetBundle.LoadAssetAsync(assetName);
         yield return bundleRequest;
-
+        Debug.Log("this is LoadBundleAsync");
         action?.Invoke(bundleRequest?.asset);
     }
 
-    public void LoadAsset(string assetName, Action<UObject> action)
+    /// <summary>
+    /// 编辑器环境下加载资源
+    /// </summary>
+    /// <param name="assetName"></param>
+    /// <param name="action"></param>
+    void EditorLoadAsset(string assetName, Action<UObject> action = null)
     {
-        StartCoroutine(LoadBundleAsync(assetName, action));
+        Debug.Log("this is EditorLoadAsset");
+        UObject obj = AssetDatabase.LoadAssetAtPath(assetName, typeof(UObject));
+        if (obj == null)
+            Debug.LogError("assets name not exist:" + assetName);
+        action?.Invoke(obj);
     }
+
+    private void LoadAsset(string assetName, Action<UObject> action)
+    {
+        if (AppConst.gameMode == GameMode.EditorMode)
+            EditorLoadAsset(assetName, action);
+        else
+            StartCoroutine(LoadBundleAsync(assetName, action));
+    }
+
+    /// <summary>
+    /// 加载UI
+    /// </summary>
+    /// <param name="assetName">资源名</param>
+    /// <param name="action"></param>
+    public void LoadUI(string assetName, Action<UObject> action = null)
+    {
+        LoadAsset(PathUtil.GetUIPath(assetName), action);
+    }
+
+    /// <summary>
+    /// 加载音乐
+    /// </summary>
+    /// <param name="assetName">资源名</param>
+    /// <param name="action"></param>
+    public void LoadMusic(string assetName, Action<UObject> action = null)
+    {
+        LoadAsset(PathUtil.GetMusicPath(assetName), action);
+    }
+
+    /// <summary>
+    /// 加载音效
+    /// </summary>
+    /// <param name="assetName"></param>
+    /// <param name="action"></param>
+    public void LoadSound(string assetName, Action<UObject> action = null)
+    {
+        LoadAsset(PathUtil.GetSoundPath(assetName), action);
+    }
+
+    /// <summary>
+    /// 加载特效
+    /// </summary>
+    /// <param name="assetName"></param>
+    /// <param name="action"></param>
+    public void LoadEffect(string assetName, Action<UObject> action = null)
+    {
+        LoadAsset(PathUtil.GetEffectPath(assetName), action);
+    }
+
+    /// <summary>
+    /// 加载场景
+    /// </summary>
+    /// <param name="assetName"></param>
+    /// <param name="action"></param>
+    public void LoadScene(string assetName, Action<UObject> action = null)
+    {
+        LoadAsset(PathUtil.GetScenePath(assetName), action);
+    }
+
+    //Tag:卸载暂时不做
+
     void Start()
     {
         this.ParseVersionFile();
-        LoadAsset("Assets/BuildResources/UI/Prefabs/TestUI.prefab", OnComplete);
+        LoadUI("Login/LoginUI", OnComplete);
     }
 
     private void OnComplete(UObject obj)

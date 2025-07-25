@@ -84,7 +84,7 @@ public class BuildTool : Editor
     static List<string> GetDependnce(string curFile)
     {
         List<string> dependence = new List<string>();
-        string[] files = AssetDatabase.GetDependencies(curFile);
+        string[] files = AssetDatabase.GetDependencies(curFile);//得到依赖文件路径列表
         dependence = files.Where(File => !File.EndsWith(".cs") && !File.Equals(curFile)).ToList();
         return dependence;
     }
