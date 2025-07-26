@@ -28,6 +28,11 @@ public class PathUtil
     public static readonly string ReadWritePath = Application.persistentDataPath;
 
     /// <summary>
+    /// lua脚本路径
+    /// </summary>
+    public static readonly string LuaPath = "Assets/BuildResources/LuaScripts";
+
+    /// <summary>
     /// bundle资源文件路径
     /// </summary>
     public static string BundleResourcePath

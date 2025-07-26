@@ -45,6 +45,10 @@ public class ResourceManager : MonoBehaviour
             }
             //资源名做Key，bundle文件和依赖文件作为信息
             m_BundleInfos.Add(bundleInfo.AssetsName, bundleInfo);
+
+            //如果资源文件的路径中存在LuaScripts字样，说明它是lua文件，并添加到luaManager中的luaNames中
+            if (info[0].IndexOf("LuaScripts") > 0)
+                Manager.Lua.LuaNames.Add(info[0]);
         }
     }
 
@@ -77,6 +81,7 @@ public class ResourceManager : MonoBehaviour
         action?.Invoke(bundleRequest?.asset);
     }
 
+#if UNITY_EDITOR
     /// <summary>
     /// 编辑器环境下加载资源
     /// </summary>
@@ -90,12 +95,15 @@ public class ResourceManager : MonoBehaviour
             Debug.LogError("assets name not exist:" + assetName);
         action?.Invoke(obj);
     }
+#endif
 
     private void LoadAsset(string assetName, Action<UObject> action)
     {
+#if UNITY_EDITOR
         if (AppConst.gameMode == GameMode.EditorMode)
             EditorLoadAsset(assetName, action);
         else
+#endif
             StartCoroutine(LoadBundleAsync(assetName, action));
     }
 
@@ -147,6 +155,13 @@ public class ResourceManager : MonoBehaviour
     public void LoadScene(string assetName, Action<UObject> action = null)
     {
         LoadAsset(PathUtil.GetScenePath(assetName), action);
+    }
+
+    public void LoadLua(string assetName, Action<UObject> action = null)
+    {
+        //这里是因为我们LuaNames中的路径是从fileList中取出来的，已经是完整的路径了
+        //再使用get的话，路径会重复
+        LoadAsset(assetName, action);
     }
 
     //Tag:卸载暂时不做

@@ -1,0 +1,22 @@
+ManifestFileVersion: 0
+CRC: 3680393374
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: a56995c6ca54acf6b314e6636f6ebab1
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 2d8df09e698f722ada1caa03d3413830
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: a56995c6ca54acf6b314e6636f6ebab1
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/BuildResources/UI/Res/Tex_0243_83.png
+Dependencies: []
