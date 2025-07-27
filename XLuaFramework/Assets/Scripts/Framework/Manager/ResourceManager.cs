@@ -164,5 +164,15 @@ public class ResourceManager : MonoBehaviour
         LoadAsset(assetName, action);
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="assetName"></param>
+    /// <param name="action"></param>
+    public void LoadPrefab(string assetName, Action<UObject> action = null)
+    {
+        LoadAsset(assetName, action);
+    }
+
     //Tag:Ð¶ÔØÔÝÊ±²»×ö
 }

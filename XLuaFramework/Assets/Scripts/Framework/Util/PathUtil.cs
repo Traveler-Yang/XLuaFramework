@@ -91,6 +91,10 @@ public class PathUtil
     {
         return string.Format("Assets/BuildResources/Effects/Prefabs/{0}.prefab", name);
     }
+    public static string GetModelPath(string name)
+    {
+        return string.Format("Assets/BuildResources/Model/Prefabs/{0}.prefab", name);
+    }
     public static string GetSpritePath(string name)
     {
         return string.Format("Assets/BuildResources/Sprites/{0}", name);
