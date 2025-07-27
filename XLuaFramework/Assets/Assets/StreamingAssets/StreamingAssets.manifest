@@ -1,0 +1,48 @@
+ManifestFileVersion: 0
+CRC: 3596151453
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: luascripts/main.bytes.ab
+      Dependencies: {}
+    Info_1:
+      Name: scene/main.unity.ab
+      Dependencies: {}
+    Info_2:
+      Name: ui/prefabs/testui.prefab.ab
+      Dependencies:
+        Dependency_0: ui/res/tex_0045_0_0.png.ab
+        Dependency_1: ui/res/tex_0243_221.png.ab
+        Dependency_2: ui/res/tex_0243_260.png.ab
+        Dependency_3: ui/res/tex_0243_46.png.ab
+    Info_3:
+      Name: ui/res/tex_0045_0_0.png.ab
+      Dependencies: {}
+    Info_4:
+      Name: ui/res/tex_0243_118.png.ab
+      Dependencies: {}
+    Info_5:
+      Name: ui/res/tex_0243_220.png.ab
+      Dependencies: {}
+    Info_6:
+      Name: ui/res/tex_0243_221.png.ab
+      Dependencies: {}
+    Info_7:
+      Name: ui/res/tex_0243_260.png.ab
+      Dependencies: {}
+    Info_8:
+      Name: ui/res/tex_0243_46.png.ab
+      Dependencies: {}
+    Info_9:
+      Name: ui/res/tex_0243_83.png.ab
+      Dependencies: {}
+    Info_10:
+      Name: ui/res/tex_0243_87.png.ab
+      Dependencies: {}
+    Info_11:
+      Name: ui/prefabs/login/loginui.prefab.ab
+      Dependencies:
+        Dependency_0: ui/res/tex_0045_0_0.png.ab
+        Dependency_1: ui/res/tex_0243_221.png.ab
+        Dependency_2: ui/res/tex_0243_260.png.ab
+        Dependency_3: ui/res/tex_0243_46.png.ab
