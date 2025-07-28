@@ -8,16 +8,25 @@ public class GameStart : MonoBehaviour
 
     void Start()
     {
+        Manager.Event.Subscribe(10000, OnLuaInit);
+
         AppConst.gameMode = this.gameMode;
         DontDestroyOnLoad(this);
 
         Manager.Resource.ParseVersionFile();
-        Manager.Lua.Init(() =>
-        {
-            Manager.Lua.StartLua("Main");
-            XLua.LuaFunction func = Manager.Lua.LuaEnv.Global.Get<XLua.LuaFunction>("Main");
-            func.Call();
-        });
+        Manager.Lua.Init();
 
+    }
+
+    void OnLuaInit(object args)
+    {
+        Manager.Lua.StartLua("Main");
+        XLua.LuaFunction func = Manager.Lua.LuaEnv.Global.Get<XLua.LuaFunction>("Main");
+        func.Call();
+    }
+
+    private void OnApplicationQuit()
+    {
+        Manager.Event.UnSubscribe(10000, OnLuaInit);
     }
 }

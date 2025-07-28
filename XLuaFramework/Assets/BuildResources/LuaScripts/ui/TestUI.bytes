@@ -14,31 +14,31 @@ function OnOpen()
 	local slider_Music_Volume = self.transform:Find("MusicSlider"):GetComponent("Slider");
 	local slider_Sound_Volume = self.transform:Find("SoundSlider"):GetComponent("Slider");
 
-	btn_Play_Music.onClick:AddListener(
+	btn_Play_Music:OnClickSet(
 		function ()
 			Manager.Sound:PlayMusic("dayu.mp3");
 		end)
-	btn_Pause_Music.onClick:AddListener(
+	btn_Pause_Music:OnClickSet(
 		function ()
 			Manager.Sound:PauseMusic();
 		end)
-	btn_UnPause_Music.onClick:AddListener(
+	btn_UnPause_Music:OnClickSet(
 		function ()
 			Manager.Sound:OnUnPauseMusic();
 		end)
-	btn_Stop_Music.onClick:AddListener(
+	btn_Stop_Music:OnClickSet(
 		function ()
 			Manager.Sound:StopMusic();
 		end)
-	btn_Play_Sound.onClick:AddListener(
+	btn_Play_Sound:OnClickSet(
 		function ()
 			Manager.Sound:PlaySound("ui_touch.wav");
 		end)
-	slider_Music_Volume.onValueChanged:AddListener(
+	slider_Music_Volume:OnValueChangedSet(
 		function (volume)
 			Manager.Sound:SetMusicVolume(volume);
 		end)
-	slider_Sound_Volume.onValueChanged:AddListener(
+	slider_Sound_Volume:OnValueChangedSet(
 		function (volume)
 			Manager.Sound:SetSoundVolume(volume);
 		end)

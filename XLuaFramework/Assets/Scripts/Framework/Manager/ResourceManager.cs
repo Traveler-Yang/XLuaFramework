@@ -199,4 +199,9 @@ public class ResourceManager : MonoBehaviour
     }
 
     //Tag:Ğ¶ÔØÔİÊ±²»×ö
+
+    public void UnloadBundle(string name)
+    {
+        
+    }
 }
