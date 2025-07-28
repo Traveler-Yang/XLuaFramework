@@ -1,0 +1,35 @@
+ManifestFileVersion: 0
+CRC: 2547003787
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 386d69ebfcb0d9763ab0a5e68f403f34
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: cb23c373db8092b547738c07f58cef24
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 386d69ebfcb0d9763ab0a5e68f403f34
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 136
+  Script: {instanceID: 0}
+- Class: 143
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/BuildResources/Model/Prefabs/Player.prefab
+Dependencies:
+- D:/GitMMORPG/XLuaFramework/XLuaFramework/Assets/StreamingAssets/model/mat/player.mat.ab

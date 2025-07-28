@@ -3,13 +3,13 @@ CRC: 39602291
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 7bc8c6c9f8d0922d663ef3fe8f5f95c8
+    Hash: 516a43582c7439c4d10bfd03cc00d688
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 3f45bf64e60799eadc011bb780662977
+    Hash: 3a5fbaab1e180b1b4ae5003eea655cae
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: 7bc8c6c9f8d0922d663ef3fe8f5f95c8
+    Hash: 516a43582c7439c4d10bfd03cc00d688
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -21,11 +21,11 @@ ClassTypes:
 - Class: 48
   Script: {instanceID: 0}
 - Class: 114
-  Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-- Class: 114
   Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
 - Class: 115
   Script: {instanceID: 0}
 - Class: 128
@@ -56,7 +56,7 @@ SerializeReferenceClassIdentifiers:
 Assets:
 - Assets/BuildResources/UI/Prefabs/Login/LoginUI.prefab
 Dependencies:
-- D:/GitMMORPG/XLuaFramework/Assets/StreamingAssets/ui/res/tex_0045_0_0.png.ab
-- D:/GitMMORPG/XLuaFramework/Assets/StreamingAssets/ui/res/tex_0243_221.png.ab
-- D:/GitMMORPG/XLuaFramework/Assets/StreamingAssets/ui/res/tex_0243_260.png.ab
-- D:/GitMMORPG/XLuaFramework/Assets/StreamingAssets/ui/res/tex_0243_46.png.ab
+- D:/GitMMORPG/XLuaFramework/XLuaFramework/Assets/StreamingAssets/ui/res/tex_0045_0_0.png.ab
+- D:/GitMMORPG/XLuaFramework/XLuaFramework/Assets/StreamingAssets/ui/res/tex_0243_221.png.ab
+- D:/GitMMORPG/XLuaFramework/XLuaFramework/Assets/StreamingAssets/ui/res/tex_0243_260.png.ab
+- D:/GitMMORPG/XLuaFramework/XLuaFramework/Assets/StreamingAssets/ui/res/tex_0243_46.png.ab

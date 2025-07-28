@@ -5,12 +5,12 @@ using UnityEngine;
 
 public class SceneLogic : LuaBehaviour
 {
-    //public string sceneName;
+    public string SceneName;
 
     Action m_LuaActive;//激活
     Action m_LuaInActive;//隐藏（非激活）
     Action m_LuaOnEnter;//第一次加载场景
-    Action m_LuaOnQuit;//
+    Action m_LuaOnQuit;//卸载场景
 
     public override void Init(string luaName)
     {
