@@ -23,6 +23,11 @@ public class GameStart : MonoBehaviour
         Manager.Lua.StartLua("Main");
         XLua.LuaFunction func = Manager.Lua.LuaEnv.Global.Get<XLua.LuaFunction>("Main");
         func.Call();
+
+        Manager.Pool.CreatGameObjectPool("UI", 10);
+        Manager.Pool.CreatGameObjectPool("Monster", 120);
+        Manager.Pool.CreatGameObjectPool("Effect", 120);
+        Manager.Pool.CreatAssetPool("AssetBundle", 10);
     }
 
     private void OnApplicationQuit()

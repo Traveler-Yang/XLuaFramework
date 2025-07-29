@@ -24,7 +24,7 @@ public class PoolManager : MonoBehaviour
     /// <param name="releaseTime"></param>
     private void CreatPool<T>(string poolName, float releaseTime) where T : PoolBase
     {
-        if (m_Pools.TryGetValue(poolName, out PoolBase pool))
+        if (!m_Pools.TryGetValue(poolName, out PoolBase pool))
         {
             GameObject go = new GameObject(poolName);
             go.transform.SetParent(m_PoolParent);
@@ -64,7 +64,7 @@ public class PoolManager : MonoBehaviour
     {
         if (m_Pools.TryGetValue(poolName, out PoolBase pool))
         {
-            return pool;
+            return pool.Spwan(assetName);
         }
         return null;
     }

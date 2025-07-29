@@ -12,13 +12,15 @@ Assets/BuildResources/Model/Mat/Player.mat|model/mat/player.mat.ab|Packages/com.
 Assets/BuildResources/Model/Mat/Test01.mat|model/mat/test01.mat.ab|Packages/com.unity.render-pipelines.universal/Shaders/Unlit.shader
 Assets/BuildResources/Model/Mat/Test02.mat|model/mat/test02.mat.ab|Packages/com.unity.render-pipelines.universal/Shaders/Unlit.shader
 Assets/BuildResources/Model/Prefabs/Player.prefab|model/prefabs/player.prefab.ab|Packages/com.unity.render-pipelines.universal/Shaders/Unlit.shader|Assets/BuildResources/Model/Mat/Player.mat
-Assets/BuildResources/UI/Prefabs/TestUI.prefab|ui/prefabs/testui.prefab.ab|Assets/BuildResources/UI/Res/Tex_0243_260.png|Assets/BuildResources/UI/Res/Tex_0243_46.png|Assets/BuildResources/UI/Res/Tex_0045_0_0.png|Assets/BuildResources/UI/Res/Tex_0243_221.png
+Assets/BuildResources/UI/Prefabs/TestUI.prefab|ui/prefabs/testui.prefab.ab|Assets/BuildResources/UI/Res/Tex_0243_260.png|Assets/BuildResources/UI/Res/Tex_0243_83.png|Assets/BuildResources/UI/Res/Tex_0243_46.png|Assets/BuildResources/UI/Res/Tex_0045_0_0.png|Assets/BuildResources/UI/Res/Tex_0243_221.png
 Assets/BuildResources/UI/Res/Tex_0045_0_0.png|ui/res/tex_0045_0_0.png.ab
+Assets/BuildResources/UI/Res/Tex_0045_0_1.png|ui/res/tex_0045_0_1.png.ab
 Assets/BuildResources/UI/Res/Tex_0243_118.png|ui/res/tex_0243_118.png.ab
 Assets/BuildResources/UI/Res/Tex_0243_220.png|ui/res/tex_0243_220.png.ab
 Assets/BuildResources/UI/Res/Tex_0243_221.png|ui/res/tex_0243_221.png.ab
+Assets/BuildResources/UI/Res/Tex_0243_226.png|ui/res/tex_0243_226.png.ab
 Assets/BuildResources/UI/Res/Tex_0243_260.png|ui/res/tex_0243_260.png.ab
 Assets/BuildResources/UI/Res/Tex_0243_46.png|ui/res/tex_0243_46.png.ab
 Assets/BuildResources/UI/Res/Tex_0243_83.png|ui/res/tex_0243_83.png.ab
 Assets/BuildResources/UI/Res/Tex_0243_87.png|ui/res/tex_0243_87.png.ab
-Assets/BuildResources/UI/Prefabs/Login/LoginUI.prefab|ui/prefabs/login/loginui.prefab.ab|Assets/BuildResources/UI/Res/Tex_0243_260.png|Assets/BuildResources/UI/Res/Tex_0243_46.png|Assets/BuildResources/UI/Res/Tex_0045_0_0.png|Assets/BuildResources/UI/Res/Tex_0243_221.png
+Assets/BuildResources/UI/Prefabs/Login/LoginUI.prefab|ui/prefabs/login/loginui.prefab.ab|Assets/BuildResources/UI/Res/Tex_0243_260.png|Assets/BuildResources/UI/Res/Tex_0243_83.png|Assets/BuildResources/UI/Res/Tex_0243_46.png|Assets/BuildResources/UI/Res/Tex_0045_0_1.png|Assets/BuildResources/UI/Res/Tex_0243_226.png

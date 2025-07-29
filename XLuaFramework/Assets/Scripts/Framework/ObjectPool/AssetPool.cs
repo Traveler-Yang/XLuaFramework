@@ -21,8 +21,8 @@ public class AssetPool : PoolBase
         {
             if (System.DateTime.Now.Ticks - item.LastUserTime.Ticks >= m_ReleaseTime * 10000000)
             {
-                Debug.LogFormat("AssetPool release time: {0}", System.DateTime.Now);
-                Manager.Resource.UnloadBundle(name);
+                Debug.LogFormat("AssetPool release time: {0} UnLoad ab£º{1}", System.DateTime.Now, item.Name);
+                Manager.Resource.UnloadBundle(item.Object);
                 m_Objects.Remove(item);
                 Release();
                 return;

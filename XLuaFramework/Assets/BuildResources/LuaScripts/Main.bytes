@@ -24,9 +24,15 @@ Manager.Entity:SetEntityGroup(entity_group)
 
 function Main()
 	print("hello main");
-	Manager.UI:OpenUI("TestUI", "UI", "ui.TestUI")
+	-- Manager.UI:OpenUI("TestUI", "UI", "ui.TestUI")
 	-- Manager.UI:OpenUI("Login/LoginUI", "Main", "ui.TestUI")
 	-- Manager.Scene:LoadScene("Test01", "scene.Scene01");
+	local rapidjson = require('rapidjson')
+	local t = rapidjson.decode('{"a":123}')
+	print(t.a)
+	t.a = 456
+	local s = rapidjson.encode(t)
+	print('json', s)
 end
 
 --Main();

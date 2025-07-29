@@ -10,7 +10,7 @@ public class PoolBase : MonoBehaviour
     protected float m_ReleaseTime;
 
     /// <summary>
-    /// 上次释放资源的时间/毫微秒   1（秒） = 10000000（毫微秒）
+    /// 上次释放资源的时间/毫微秒   1（秒） = 1000000000（毫微秒）
     /// </summary>
     protected float m_LastReleaseTime = 0;
 
@@ -70,7 +70,7 @@ public class PoolBase : MonoBehaviour
 
     private void Update()
     {
-        if (System.DateTime.Now.Ticks - m_LastReleaseTime >= m_ReleaseTime * 10000000)
+        if (System.DateTime.Now.Ticks - m_LastReleaseTime <= m_ReleaseTime * 1000000000)
         {
             m_LastReleaseTime = System.DateTime.Now.Ticks;
             Release();

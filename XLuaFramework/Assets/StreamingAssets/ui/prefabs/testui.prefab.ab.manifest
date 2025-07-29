@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 1884588663
+CRC: 2637867565
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: cd62cd2c998a57875bfbdd3edb106f73
+    Hash: 4af234564b808e5d06b57ef0c67a34ce
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 237000b4b4ced2353dd34bf63e67ddbc
+    Hash: c5abbe750e752e7d6e102b83a793da19
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: cd62cd2c998a57875bfbdd3edb106f73
+    Hash: 4af234564b808e5d06b57ef0c67a34ce
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -21,13 +21,13 @@ ClassTypes:
 - Class: 48
   Script: {instanceID: 0}
 - Class: 114
-  Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
 - Class: 114
-  Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
 - Class: 115
   Script: {instanceID: 0}
 - Class: 128
@@ -64,3 +64,4 @@ Dependencies:
 - D:/GitMMORPG/XLuaFramework/XLuaFramework/Assets/StreamingAssets/ui/res/tex_0243_221.png.ab
 - D:/GitMMORPG/XLuaFramework/XLuaFramework/Assets/StreamingAssets/ui/res/tex_0243_260.png.ab
 - D:/GitMMORPG/XLuaFramework/XLuaFramework/Assets/StreamingAssets/ui/res/tex_0243_46.png.ab
+- D:/GitMMORPG/XLuaFramework/XLuaFramework/Assets/StreamingAssets/ui/res/tex_0243_83.png.ab

@@ -10,6 +10,8 @@ function OnOpen()
 	local btn_UnPause_Music = self.transform:Find("UnPauseMusicButton"):GetComponent("Button");
 	local btn_Stop_Music = self.transform:Find("StopMusicButton"):GetComponent("Button");
 	local btn_Play_Sound = self.transform:Find("PlaySooundButton"):GetComponent("Button");
+	local btn_Close = self.transform:Find("ButtonClose"):GetComponent("Button");
+	local btn_Pool_Test = self.transform:Find("ButtonPoolTest"):GetComponent("Button");
 
 	local slider_Music_Volume = self.transform:Find("MusicSlider"):GetComponent("Slider");
 	local slider_Sound_Volume = self.transform:Find("SoundSlider"):GetComponent("Slider");
@@ -33,6 +35,14 @@ function OnOpen()
 	btn_Play_Sound:OnClickSet(
 		function ()
 			Manager.Sound:PlaySound("ui_touch.wav");
+		end)
+	btn_Pool_Test:OnClickSet(
+		function ()
+			Manager.UI:OpenUI("Login/LoginUI", "UI", "ui.TestUI");
+		end)
+	btn_Close:OnClickSet(
+		function ()
+			self:OnClose();
 		end)
 	slider_Music_Volume:OnValueChangedSet(
 		function (volume)

@@ -1,20 +1,22 @@
 ManifestFileVersion: 0
-CRC: 545531597
+CRC: 2993365448
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 16a80acfeff1fcc43f79e3f423dce954
+    Hash: 9eae9656b4117b49497432709cda1f24
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 5ad585dd02dfb5016c0dad519eab8f49
+    Hash: 2d8df09e698f722ada1caa03d3413830
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: 16a80acfeff1fcc43f79e3f423dce954
+    Hash: 9eae9656b4117b49497432709cda1f24
 HashAppended: 0
 ClassTypes:
-- Class: 49
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
-- Assets/BuildResources/LuaScripts/ui/TestUI.bytes
+- Assets/BuildResources/UI/Res/Tex_0045_0_1.png
 Dependencies: []
