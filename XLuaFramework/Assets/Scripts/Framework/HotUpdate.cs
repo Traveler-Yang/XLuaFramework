@@ -25,6 +25,10 @@ public class HotUpdate : MonoBehaviour
         public string fileName;//文件名
         public DownloadHandler fileData;//文件内容
     }
+
+    //下载文件数量
+    int m_DownloadCount;
+
     /// <summary>
     /// 下载单个文件
     /// </summary>
@@ -41,6 +45,7 @@ public class HotUpdate : MonoBehaviour
             yield break;
             //重试：扩展内容
         }
+        yield return new WaitForSeconds(0.02f);
         info.fileData = webRequest.downloadHandler;
         Complete?.Invoke(info);
         webRequest.Dispose();//下载完成释放
@@ -82,8 +87,15 @@ public class HotUpdate : MonoBehaviour
         return downFileInfos;
     }
 
+    GameObject loadingObj;
+    LoadingUI loadingUI;
+
     private void Start()
     {
+        GameObject go = Resources.Load<GameObject>("LoadingUI");
+        loadingObj = Instantiate(go);
+        loadingObj.transform.SetParent(this.transform);
+        loadingUI = loadingObj.GetComponent<LoadingUI>();
         //检查是否是首次安装
         if (IsFirstInstall())
         {
@@ -118,6 +130,7 @@ public class HotUpdate : MonoBehaviour
     /// </summary>
     private void ReleaseResources()
     {
+        m_DownloadCount = 0;
         string url = Path.Combine(PathUtil.ReadPath, AppConst.FileListName);
         DownFileInfo info = new DownFileInfo();
         info.url = url;
@@ -133,6 +146,7 @@ public class HotUpdate : MonoBehaviour
         m_ReadPathFileListData = file.fileData.data;
         List<DownFileInfo> fileInfos = GetFileList(file.fileData.text, PathUtil.ReadPath);
         StartCoroutine(DownloadFile(fileInfos, OnReleaseFileComplete, OnReleaseAllFileComplete));
+        loadingUI.InitProgress(fileInfos.Count, "正在释放资源，不消耗流量。。。");
     }
 
     /// <summary>
@@ -145,6 +159,8 @@ public class HotUpdate : MonoBehaviour
         //下载完成bundle文件后进行写入
         string writeFile = Path.Combine(PathUtil.ReadWritePath, fileInfo.fileName);
         FileUtil.WriteFile(writeFile, fileInfo.fileData.data);
+        m_DownloadCount++;
+        loadingUI.UpdateProgress(m_DownloadCount);
     }
 
     /// <summary>
@@ -176,6 +192,7 @@ public class HotUpdate : MonoBehaviour
     /// <param name="info"></param>
     private void OnDownloadSeverFileListComplete(DownFileInfo file)
     {
+        m_DownloadCount = 0;
         m_SeverFileListData = file.fileData.data;
         //获取到服务器fileList文件信息
         List<DownFileInfo> fileInfos = GetFileList(file.fileData.text, AppConst.ResoucesUrl);
@@ -197,7 +214,10 @@ public class HotUpdate : MonoBehaviour
         }
         //需要下载的文件列表如果大于0，则需要更新
         if (downListFiles.Count > 0)
+        {
             StartCoroutine(DownloadFile(fileInfos, OnUpdateFileComplete, OnUpdateAllFileComplete));
+            loadingUI.InitProgress(downListFiles.Count, "正在更新资源。。。");
+        }
         else//否则不需要更新，则直接进入游戏
             EnterGame();
     }
@@ -212,6 +232,8 @@ public class HotUpdate : MonoBehaviour
         string writeFile = Path.Combine(PathUtil.ReadWritePath, fileInfo.fileName);
         //将最新的bundle文件写入
         FileUtil.WriteFile(writeFile, fileInfo.fileData.data);
+        m_DownloadCount++;
+        loadingUI.UpdateProgress(m_DownloadCount);
     }
 
     /// <summary>
@@ -222,6 +244,7 @@ public class HotUpdate : MonoBehaviour
         //将最新的fileList文件写入
         FileUtil.WriteFile(Path.Combine(PathUtil.ReadWritePath, AppConst.FileListName), m_SeverFileListData);
         EnterGame();
+        loadingUI.InitProgress(0, "正在载入。。。");
     }
 
     /// <summary>
@@ -229,15 +252,7 @@ public class HotUpdate : MonoBehaviour
     /// </summary>
     private void EnterGame()
     {
-        Manager.Resource.ParseVersionFile();
-        Manager.Resource.LoadUI("Login/LoginUI", OnComplete);
-    }
-
-    private void OnComplete(UnityEngine.Object obj)
-    {
-        GameObject go = Instantiate(obj) as GameObject;
-        go.transform.SetParent(this.transform);//设置父节点
-        go.SetActive(true);//启用
-        go.transform.localPosition = Vector3.zero;//位置归零
+        Manager.Event.Fire((int)GameEvent.GameInit);
+        Destroy(loadingObj);
     }
 }

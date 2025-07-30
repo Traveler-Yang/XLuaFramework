@@ -85,15 +85,19 @@ public class NetClient
         {
             if (m_Client == null || m_TcpStream == null)
                 return;
-            //判断数据大小
-            if (m_Buffer.Length < 1)
+
+            //收到的消息长度
+            int length = m_TcpStream.EndRead(asyncResult);
+
+            //判断消息数据大小
+            if (length < 1)
             {
                 //如果是个空消息，则断开连接
                 OnDisConnected();
                 return;
             }
             //解析数据
-            ReceiveData();
+            ReceiveData(length);
             lock (m_TcpStream)
             {
                 //解析数据后，还要接收下一次的数据，所以需要清空Buffer后再读取
@@ -111,12 +115,12 @@ public class NetClient
     /// <summary>
     /// 解析数据
     /// </summary>
-    private void ReceiveData()
+    private void ReceiveData(int length)
     {
         //将指针指向末尾，因为里面可能还有其他数据
         m_MemStream.Seek(0, SeekOrigin.End);
         //指向末尾后，再追加收到的数据
-        m_MemStream.Write(m_Buffer, 0, m_Buffer.Length);
+        m_MemStream.Write(m_Buffer, 0, length);
         //最后再指向开头
         m_MemStream.Seek(0, SeekOrigin.Begin);
 

@@ -8,18 +8,27 @@ public class GameStart : MonoBehaviour
     public bool OpenLog;
     void Start()
     {
-        Manager.Event.Subscribe(10000, OnLuaInit);
+        Manager.Event.Subscribe((int)GameEvent.StartLua, StartLua);
+        Manager.Event.Subscribe((int)GameEvent.GameInit, GameInit);
 
         AppConst.gameMode = this.gameMode;
         AppConst.OpenLog = this.OpenLog;
         DontDestroyOnLoad(this);
 
-        Manager.Resource.ParseVersionFile();
-        Manager.Lua.Init();
-
+        if (AppConst.gameMode == GameMode.UpdateMode)
+            this.gameObject.AddComponent<HotUpdate>();
+        else
+            Manager.Event.Fire((int)GameEvent.GameInit);
     }
 
-    void OnLuaInit(object args)
+    private void GameInit(object args)
+    {
+        if (AppConst.gameMode != GameMode.EditorMode)
+            Manager.Resource.ParseVersionFile();
+        Manager.Lua.Init();
+    }
+
+    void StartLua(object args)
     {
         Manager.Lua.StartLua("Main");
         XLua.LuaFunction func = Manager.Lua.LuaEnv.Global.Get<XLua.LuaFunction>("Main");
@@ -33,6 +42,7 @@ public class GameStart : MonoBehaviour
 
     private void OnApplicationQuit()
     {
-        Manager.Event.UnSubscribe(10000, OnLuaInit);
+        Manager.Event.UnSubscribe((int)GameEvent.StartLua, StartLua);
+        Manager.Event.UnSubscribe((int)GameEvent.GameInit, GameInit);
     }
 }

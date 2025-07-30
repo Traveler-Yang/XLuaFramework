@@ -11,6 +11,12 @@ public enum GameMode
     UpdateMode,
 }
 
+public enum GameEvent
+{
+    GameInit = 10000,
+    StartLua,
+}
+
 public class AppConst
 {
     public const string BundleExtension = ".ab";

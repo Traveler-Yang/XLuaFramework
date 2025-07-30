@@ -1,3 +1,5 @@
+Assets/BuildResources/LuaScripts/Class.bytes|luascripts/class.bytes.ab
+Assets/BuildResources/LuaScripts/log.bytes|luascripts/log.bytes.ab
 Assets/BuildResources/LuaScripts/Main.bytes|luascripts/main.bytes.ab
 Assets/BuildResources/Scenes/Main.unity|scenes/main.unity.ab
 Assets/BuildResources/Scenes/Test01.unity|scenes/test01.unity.ab|Assets/BuildResources/Model/Mat/Test01.mat|Packages/com.unity.render-pipelines.universal/Shaders/Unlit.shader
@@ -5,6 +7,9 @@ Assets/BuildResources/Scenes/Test02.unity|scenes/test02.unity.ab|Packages/com.un
 Assets/BuildResources/Audio/Music/dayu.mp3|audio/music/dayu.mp3.ab
 Assets/BuildResources/Audio/Sound/ui_touch.wav|audio/sound/ui_touch.wav.ab
 Assets/BuildResources/LuaScripts/entity/PlayerEntity.bytes|luascripts/entity/playerentity.bytes.ab
+Assets/BuildResources/LuaScripts/message/base_msg.bytes|luascripts/message/base_msg.bytes.ab
+Assets/BuildResources/LuaScripts/message/msg_mgr.bytes|luascripts/message/msg_mgr.bytes.ab
+Assets/BuildResources/LuaScripts/message/msg_test.bytes|luascripts/message/msg_test.bytes.ab
 Assets/BuildResources/LuaScripts/scene/Scene01.bytes|luascripts/scene/scene01.bytes.ab
 Assets/BuildResources/LuaScripts/scene/Scene02.bytes|luascripts/scene/scene02.bytes.ab
 Assets/BuildResources/LuaScripts/ui/TestUI.bytes|luascripts/ui/testui.bytes.ab
@@ -12,13 +17,15 @@ Assets/BuildResources/Model/Mat/Player.mat|model/mat/player.mat.ab|Packages/com.
 Assets/BuildResources/Model/Mat/Test01.mat|model/mat/test01.mat.ab|Packages/com.unity.render-pipelines.universal/Shaders/Unlit.shader
 Assets/BuildResources/Model/Mat/Test02.mat|model/mat/test02.mat.ab|Packages/com.unity.render-pipelines.universal/Shaders/Unlit.shader
 Assets/BuildResources/Model/Prefabs/Player.prefab|model/prefabs/player.prefab.ab|Packages/com.unity.render-pipelines.universal/Shaders/Unlit.shader|Assets/BuildResources/Model/Mat/Player.mat
-Assets/BuildResources/UI/Prefabs/TestUI.prefab|ui/prefabs/testui.prefab.ab|Assets/BuildResources/UI/Res/Tex_0243_260.png|Assets/BuildResources/UI/Res/Tex_0243_46.png|Assets/BuildResources/UI/Res/Tex_0045_0_0.png|Assets/BuildResources/UI/Res/Tex_0243_221.png
+Assets/BuildResources/UI/Prefabs/TestUI.prefab|ui/prefabs/testui.prefab.ab|Assets/BuildResources/UI/Res/Tex_0243_260.png|Assets/BuildResources/UI/Res/Tex_0243_83.png|Assets/BuildResources/UI/Res/Tex_0243_46.png|Assets/BuildResources/UI/Res/Tex_0045_0_0.png|Assets/BuildResources/UI/Res/Tex_0243_221.png
 Assets/BuildResources/UI/Res/Tex_0045_0_0.png|ui/res/tex_0045_0_0.png.ab
+Assets/BuildResources/UI/Res/Tex_0045_0_1.png|ui/res/tex_0045_0_1.png.ab
 Assets/BuildResources/UI/Res/Tex_0243_118.png|ui/res/tex_0243_118.png.ab
 Assets/BuildResources/UI/Res/Tex_0243_220.png|ui/res/tex_0243_220.png.ab
 Assets/BuildResources/UI/Res/Tex_0243_221.png|ui/res/tex_0243_221.png.ab
+Assets/BuildResources/UI/Res/Tex_0243_226.png|ui/res/tex_0243_226.png.ab
 Assets/BuildResources/UI/Res/Tex_0243_260.png|ui/res/tex_0243_260.png.ab
 Assets/BuildResources/UI/Res/Tex_0243_46.png|ui/res/tex_0243_46.png.ab
 Assets/BuildResources/UI/Res/Tex_0243_83.png|ui/res/tex_0243_83.png.ab
 Assets/BuildResources/UI/Res/Tex_0243_87.png|ui/res/tex_0243_87.png.ab
-Assets/BuildResources/UI/Prefabs/Login/LoginUI.prefab|ui/prefabs/login/loginui.prefab.ab|Assets/BuildResources/UI/Res/Tex_0243_260.png|Assets/BuildResources/UI/Res/Tex_0243_46.png|Assets/BuildResources/UI/Res/Tex_0045_0_0.png|Assets/BuildResources/UI/Res/Tex_0243_221.png
+Assets/BuildResources/UI/Prefabs/Login/LoginUI.prefab|ui/prefabs/login/loginui.prefab.ab|Assets/BuildResources/UI/Res/Tex_0243_260.png|Assets/BuildResources/UI/Res/Tex_0243_83.png|Assets/BuildResources/UI/Res/Tex_0243_46.png|Assets/BuildResources/UI/Res/Tex_0045_0_1.png|Assets/BuildResources/UI/Res/Tex_0243_226.png

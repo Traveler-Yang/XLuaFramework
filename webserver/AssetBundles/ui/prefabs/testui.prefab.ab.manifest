@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 1884588663
+CRC: 1459967994
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: cd62cd2c998a57875bfbdd3edb106f73
+    Hash: a23deb7202482aeaba5dbfbce23d6d39
   TypeTreeHash:
     serializedVersion: 2
     Hash: 237000b4b4ced2353dd34bf63e67ddbc
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: cd62cd2c998a57875bfbdd3edb106f73
+    Hash: a23deb7202482aeaba5dbfbce23d6d39
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -64,3 +64,4 @@ Dependencies:
 - D:/GitMMORPG/XLuaFramework/XLuaFramework/Assets/StreamingAssets/ui/res/tex_0243_221.png.ab
 - D:/GitMMORPG/XLuaFramework/XLuaFramework/Assets/StreamingAssets/ui/res/tex_0243_260.png.ab
 - D:/GitMMORPG/XLuaFramework/XLuaFramework/Assets/StreamingAssets/ui/res/tex_0243_46.png.ab
+- D:/GitMMORPG/XLuaFramework/XLuaFramework/Assets/StreamingAssets/ui/res/tex_0243_83.png.ab

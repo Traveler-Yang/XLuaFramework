@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 39602291
+CRC: 849832752
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 516a43582c7439c4d10bfd03cc00d688
+    Hash: 3609954c503fa2291e1ca3f2e73a2183
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 3a5fbaab1e180b1b4ae5003eea655cae
+    Hash: 237000b4b4ced2353dd34bf63e67ddbc
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: 516a43582c7439c4d10bfd03cc00d688
+    Hash: 3609954c503fa2291e1ca3f2e73a2183
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -20,6 +20,8 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 48
   Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
 - Class: 114
@@ -52,11 +54,14 @@ SerializeReferenceClassIdentifiers:
 - AssemblyName: UnityEngine.UI
   ClassName: UnityEngine.UI.Navigation
 - AssemblyName: UnityEngine.UI
+  ClassName: UnityEngine.UI.Slider/SliderEvent
+- AssemblyName: UnityEngine.UI
   ClassName: UnityEngine.UI.SpriteState
 Assets:
 - Assets/BuildResources/UI/Prefabs/Login/LoginUI.prefab
 Dependencies:
-- D:/GitMMORPG/XLuaFramework/XLuaFramework/Assets/StreamingAssets/ui/res/tex_0045_0_0.png.ab
-- D:/GitMMORPG/XLuaFramework/XLuaFramework/Assets/StreamingAssets/ui/res/tex_0243_221.png.ab
+- D:/GitMMORPG/XLuaFramework/XLuaFramework/Assets/StreamingAssets/ui/res/tex_0045_0_1.png.ab
+- D:/GitMMORPG/XLuaFramework/XLuaFramework/Assets/StreamingAssets/ui/res/tex_0243_226.png.ab
 - D:/GitMMORPG/XLuaFramework/XLuaFramework/Assets/StreamingAssets/ui/res/tex_0243_260.png.ab
 - D:/GitMMORPG/XLuaFramework/XLuaFramework/Assets/StreamingAssets/ui/res/tex_0243_46.png.ab
+- D:/GitMMORPG/XLuaFramework/XLuaFramework/Assets/StreamingAssets/ui/res/tex_0243_83.png.ab

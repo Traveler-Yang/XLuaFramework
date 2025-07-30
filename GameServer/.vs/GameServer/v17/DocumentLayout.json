@@ -1,14 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Administrator\\Downloads\\XLua\u6846\u67B6\u8BFE\u7A0B\u8D44\u6E90\\XLua\u6846\u67B6\u8BFE\u7A0B\u8D44\u6E90\\GameServer\\",
+  "WorkspaceRootPath": "D:\\GitMMORPG\\XLuaFramework\\GameServer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{43F5DD0C-8D30-4024-BDBD-F583F516C127}|GameServer\\GameServer.csproj|d:\\administrator\\downloads\\xlua\u6846\u67B6\u8BFE\u7A0B\u8D44\u6E90\\xlua\u6846\u67B6\u8BFE\u7A0B\u8D44\u6E90\\gameserver\\gameserver\\logic\\servertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{43F5DD0C-8D30-4024-BDBD-F583F516C127}|GameServer\\GameServer.csproj|solutionrelative:gameserver\\logic\\servertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{43F5DD0C-8D30-4024-BDBD-F583F516C127}|GameServer\\GameServer.csproj|d:\\gitmmorpg\\xluaframework\\gameserver\\gameserver\\server\\messagehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43F5DD0C-8D30-4024-BDBD-F583F516C127}|GameServer\\GameServer.csproj|solutionrelative:gameserver\\server\\messagehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{43F5DD0C-8D30-4024-BDBD-F583F516C127}|GameServer\\GameServer.csproj|d:\\administrator\\downloads\\xlua\u6846\u67B6\u8BFE\u7A0B\u8D44\u6E90\\xlua\u6846\u67B6\u8BFE\u7A0B\u8D44\u6E90\\gameserver\\gameserver\\server\\messagehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{43F5DD0C-8D30-4024-BDBD-F583F516C127}|GameServer\\GameServer.csproj|solutionrelative:gameserver\\server\\messagehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{43F5DD0C-8D30-4024-BDBD-F583F516C127}|GameServer\\GameServer.csproj|D:\\GitMMORPG\\XLuaFramework\\GameServer\\gameserver\\logic\\servertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43F5DD0C-8D30-4024-BDBD-F583F516C127}|GameServer\\GameServer.csproj|solutionrelative:gameserver\\logic\\servertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -25,31 +25,26 @@
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ServerTest.cs",
+              "DocumentMoniker": "D:\\GitMMORPG\\XLuaFramework\\GameServer\\GameServer\\Logic\\ServerTest.cs",
+              "RelativeDocumentMoniker": "GameServer\\Logic\\ServerTest.cs",
+              "ToolTip": "D:\\GitMMORPG\\XLuaFramework\\GameServer\\GameServer\\Logic\\ServerTest.cs",
+              "RelativeToolTip": "GameServer\\Logic\\ServerTest.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAkwBMAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T08:49:39.977Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ServerTest.cs",
-              "DocumentMoniker": "D:\\Administrator\\Downloads\\XLua\u6846\u67B6\u8BFE\u7A0B\u8D44\u6E90\\XLua\u6846\u67B6\u8BFE\u7A0B\u8D44\u6E90\\GameServer\\GameServer\\Logic\\ServerTest.cs",
-              "RelativeDocumentMoniker": "GameServer\\Logic\\ServerTest.cs",
-              "ToolTip": "D:\\Administrator\\Downloads\\XLua\u6846\u67B6\u8BFE\u7A0B\u8D44\u6E90\\XLua\u6846\u67B6\u8BFE\u7A0B\u8D44\u6E90\\GameServer\\GameServer\\Logic\\ServerTest.cs",
-              "RelativeToolTip": "GameServer\\Logic\\ServerTest.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-30T08:49:39.977Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "MessageHandler.cs",
-              "DocumentMoniker": "D:\\Administrator\\Downloads\\XLua\u6846\u67B6\u8BFE\u7A0B\u8D44\u6E90\\XLua\u6846\u67B6\u8BFE\u7A0B\u8D44\u6E90\\GameServer\\GameServer\\Server\\MessageHandler.cs",
+              "DocumentMoniker": "D:\\GitMMORPG\\XLuaFramework\\GameServer\\GameServer\\Server\\MessageHandler.cs",
               "RelativeDocumentMoniker": "GameServer\\Server\\MessageHandler.cs",
-              "ToolTip": "D:\\Administrator\\Downloads\\XLua\u6846\u67B6\u8BFE\u7A0B\u8D44\u6E90\\XLua\u6846\u67B6\u8BFE\u7A0B\u8D44\u6E90\\GameServer\\GameServer\\Server\\MessageHandler.cs",
+              "ToolTip": "D:\\GitMMORPG\\XLuaFramework\\GameServer\\GameServer\\Server\\MessageHandler.cs",
               "RelativeToolTip": "GameServer\\Server\\MessageHandler.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAuwD4AAABHAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAkwCIAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-30T08:49:03.227Z",
               "EditorCaption": ""

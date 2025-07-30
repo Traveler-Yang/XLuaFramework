@@ -39,3 +39,14 @@ D:\Administrator\Downloads\XLua框架课程资源\XLua框架课程资源\GameSer
 D:\Administrator\Downloads\XLua框架课程资源\XLua框架课程资源\GameServer\GameServer\obj\Debug\GameServer.csproj.Up2Date
 D:\Administrator\Downloads\XLua框架课程资源\XLua框架课程资源\GameServer\GameServer\obj\Debug\GameServer.exe
 D:\Administrator\Downloads\XLua框架课程资源\XLua框架课程资源\GameServer\GameServer\obj\Debug\GameServer.pdb
+D:\GitMMORPG\XLuaFramework\GameServer\GameServer\bin\Debug\GameServer.exe.config
+D:\GitMMORPG\XLuaFramework\GameServer\GameServer\bin\Debug\GameServer.exe
+D:\GitMMORPG\XLuaFramework\GameServer\GameServer\bin\Debug\GameServer.pdb
+D:\GitMMORPG\XLuaFramework\GameServer\GameServer\bin\Debug\Newtonsoft.Json.pdb
+D:\GitMMORPG\XLuaFramework\GameServer\GameServer\bin\Debug\Newtonsoft.Json.xml
+D:\GitMMORPG\XLuaFramework\GameServer\GameServer\obj\Debug\GameServer.csproj.AssemblyReference.cache
+D:\GitMMORPG\XLuaFramework\GameServer\GameServer\obj\Debug\GameServer.exe.config
+D:\GitMMORPG\XLuaFramework\GameServer\GameServer\obj\Debug\GameServer.csproj.CoreCompileInputs.cache
+D:\GitMMORPG\XLuaFramework\GameServer\GameServer\obj\Debug\GameServer.csproj.Up2Date
+D:\GitMMORPG\XLuaFramework\GameServer\GameServer\obj\Debug\GameServer.exe
+D:\GitMMORPG\XLuaFramework\GameServer\GameServer\obj\Debug\GameServer.pdb
