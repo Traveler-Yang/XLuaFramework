@@ -1,0 +1,35 @@
+local base_msg = Class();
+
+--消息注册：添加request和response 请求和接收
+function base_msg:add_req_res(msg_name, msg_id, ...)
+    --参数列表的 Keys
+    local Keys = {...};
+    --发起request请求时调用的方法
+    self["req_"..msg_name] = function (self, ...)
+        local values = {...};
+        if #Keys == #values then
+            Log.Error("参数不正确:", msg_name);
+        end
+        local send_data = {};
+        for i = 1, #Keys do
+            send_data[Keys[i]] = values[i];
+        end
+        msg_mgr.send_msg(msg_id, send_data);
+    end
+    --消息接收
+    if type(self["res_"..msg_name]) == "function" then
+        msg_mgr.register(msg_id,
+            function (data)
+                local msg = Json.decode(data);
+                if msg.code == 0 then
+                    Log.Error("错误码:", msg.code);
+                    return;
+                end
+                self["res_"..msg_name](self, msg);
+            end)
+    else
+        Log.Error("请注册消息返回回调:"..msg_name);
+    end
+end
+
+return base_msg;

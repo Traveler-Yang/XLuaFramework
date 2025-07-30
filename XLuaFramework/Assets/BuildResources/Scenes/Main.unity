@@ -620,6 +620,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameMode: 0
+  OpenLog: 1
 --- !u!4 &1492879863
 Transform:
   m_ObjectHideFlags: 0

@@ -5,12 +5,13 @@ using UnityEngine;
 public class GameStart : MonoBehaviour
 {
     public GameMode gameMode;
-
+    public bool OpenLog;
     void Start()
     {
         Manager.Event.Subscribe(10000, OnLuaInit);
 
         AppConst.gameMode = this.gameMode;
+        AppConst.OpenLog = this.OpenLog;
         DontDestroyOnLoad(this);
 
         Manager.Resource.ParseVersionFile();

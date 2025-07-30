@@ -17,6 +17,7 @@ public class AppConst
     public const string FileListName = "filelist.txt";
 
     public static GameMode gameMode = GameMode.EditorMode;
+    public static bool OpenLog = true;
     /// <summary>
     /// 热更资源地址
     /// </summary>
